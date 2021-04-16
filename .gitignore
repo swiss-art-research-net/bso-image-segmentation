@@ -1,5 +1,5 @@
-images/*.jpg
-training/images/*.jpg
+training/data/images/*.jpg
+training/data/labels/*.jpg
 .ipynb_checkpoints
 __pycache__
 dhSegment
