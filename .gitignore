@@ -1,0 +1,5 @@
+./dhSegment/demo
+./dhSegment/pretrained_models/*.ckpt
+./images/*.jpg
+./training/images/*.jpg
+.ipynb_checkpoints
