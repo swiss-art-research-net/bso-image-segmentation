@@ -7,6 +7,7 @@ Training data and models to extract coordinates of image, document and colour ba
 - Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo
 - Annotate images data using [RunwayML](https://runwayml.com/)
 - Create training data using the `generate-training-images.ipynb` notebook
+- Split into training and validation set by crunning the `split-training-data.ipynb` notebook until the appropriate cell
 - t.b.c.
 
 ## Annotating images using RunwayML

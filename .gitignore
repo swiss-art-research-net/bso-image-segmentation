@@ -1,5 +1,7 @@
-training/data/images/*.jpg
-training/data/labels/*.jpg
+training/*/images/*.jpg
+training/*/labels/*.jpg
+training/remaining/*.jpg
 .ipynb_checkpoints
 __pycache__
 dhSegment
+pretrained_models/*.ckpt
