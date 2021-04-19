@@ -6,7 +6,7 @@
       "training_margin" : 0,
       "n_epochs": 30,
       "data_augmentation" : true,
-      "data_augmentation_max_rotation" : 0.2,
+      "data_augmentation_max_rotation" : 0.05,
       "data_augmentation_max_scaling" : 0.2,
       "data_augmentation_flip_lr": true,
       "data_augmentation_flip_ud": true,
