@@ -18,11 +18,18 @@ Follow preparation steps from https://dhsegment.readthedocs.io/en/latest/start/i
 
 ## Training
 
-- Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo
+- Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo:
+` git clone https://github.com/dhlab-epfl/dhSegment.git`
 - (optional) Annotate images data using [RunwayML](https://runwayml.com/)
 - Download images using the `download-annotated-images.ipynb` notebook
 - Create training data using the `generate-training-images.ipynb` notebook
 - Split into training and validation set by crunning the `split-training-data.ipynb` notebook until the appropriate cell
+- Download pretrained model by running:
+```
+cd pretrained_models
+python download_resnet_pretrained_model.py
+cd ..
+```
 - Train by running `python dhSegment/train.py with training/config.json`
 - (optional) observe training by running ` tensorboard --logdir model`
 
