@@ -2,14 +2,34 @@
 
 Training data and models to extract coordinates of image, document and colour bar from images.
 
-## Usage
+## Prerequisite
+
+Follow preparation steps from https://dhsegment.readthedocs.io/en/latest/start/install.html:
+
+1. Install Anaconda or Miniconda
+2. Create a virtual environment
+`conda create -n dh_segment python=3.6`
+3. Activate it
+`conda activate dh_segment`
+4. Install dhSegment
+`pip install git+https://github.com/dhlab-epfl/dhSegment`
+5. Install TensorFlow 1.13
+`conda install tensorflow-gpu=1.13.1`
+
+## Training
 
 - Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo
 - (optional) Annotate images data using [RunwayML](https://runwayml.com/)
 - Download images using the `download-annotated-images.ipynb` notebook
 - Create training data using the `generate-training-images.ipynb` notebook
 - Split into training and validation set by crunning the `split-training-data.ipynb` notebook until the appropriate cell
-- t.b.c.
+- Train by running `python dhSegment/train.py with training/config.json`
+
+## Classifying
+
+- Download images to classify using the `download-images-to-classify.ipynb`
+- (optional) Set the `limit` and `randomise` parameters to download only some of the images
+- Run `python predict.py`
 
 ## Annotating images using RunwayML
 
