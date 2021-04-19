@@ -6,3 +6,5 @@ __pycache__
 dhSegment
 pretrained_models/*.ckpt
 model/
+data/images/*.jpg
+output/*.jpg
