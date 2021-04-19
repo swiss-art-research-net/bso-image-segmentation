@@ -5,3 +5,4 @@ training/remaining/*.jpg
 __pycache__
 dhSegment
 pretrained_models/*.ckpt
+model/
