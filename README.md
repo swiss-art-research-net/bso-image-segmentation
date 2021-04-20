@@ -16,6 +16,8 @@ Follow preparation steps from https://dhsegment.readthedocs.io/en/latest/start/i
 5. Install TensorFlow 1.13
 `conda install tensorflow-gpu=1.13.1`
 
+Alternatively, use the Docker configuration included in the repository.
+
 ## Training
 
 - Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo:
@@ -58,4 +60,4 @@ Copy and edit the `.env` configuration: `cp .env.example .env`
 
 And run using `docker-compose up -d`
 
-Jupyter notebooks are accessible at [localhost:8890] (if default ports are used). To execute Python commands, bash into Docker container using `docker exec -it sari_image_classification_dhsegment bash` (if default container name is used)
+Jupyter notebooks are accessible at [localhost:8890]() (if default ports are used). To execute Python commands, bash into Docker container using `docker exec -it sari_image_classification_dhsegment bash` (if default container name is used)
