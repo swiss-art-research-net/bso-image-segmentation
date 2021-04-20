@@ -16,6 +16,8 @@ Follow preparation steps from https://dhsegment.readthedocs.io/en/latest/start/i
 5. Install TensorFlow 1.13
 `conda install tensorflow-gpu=1.13.1`
 
+Alternatively, use the Docker configuration included in the repository.
+
 ## Training
 
 - Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo:
