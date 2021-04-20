@@ -57,3 +57,5 @@ To avoid having to configure the environment locally, you can use the Docker con
 Copy and edit the `.env` configuration: `cp .env.example .env`
 
 And run using `docker-compose up -d`
+
+Jupyter notebooks are accessible at [localhost:8890] (if default ports are used). To execute Python commands, bash into Docker container using `docker exec -it sari_image_classification_dhsegment bash` (if default container name is used)
