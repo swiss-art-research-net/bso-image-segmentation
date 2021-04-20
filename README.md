@@ -31,7 +31,7 @@ python download_resnet_pretrained_model.py
 cd ..
 ```
 - Train by running `python dhSegment/train.py with training/config.json`
-- (optional) observe training by running ` tensorboard --logdir model`
+- (optional) observe training by running `tensorboard --logdir model`
 
 ## Classifying
 
@@ -49,3 +49,11 @@ RunwayML supports the creation of annotated datasets. This is currently possible
 4. Pick or create an annotation group with the categories `Colour Bar`, `Image`, and `Document`
 5. Annotate images
 6. Export annotations
+
+## Docker
+
+To avoid having to configure the environment locally, you can use the Docker configuration (CPU only).
+
+Copy and edit the `.env` configuration: `cp .env.example .env`
+
+And run using `docker-compose up -d`

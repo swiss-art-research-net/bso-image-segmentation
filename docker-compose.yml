@@ -1,0 +1,11 @@
+version: "3"
+services:
+    dhsegment:
+        build: ./docker
+        image: swissartresearx/dhsegment-jupyter
+        container_name: ${PROJECT_NAME}_dhsegment
+        volumes:
+            - ./:/workdir
+        ports:
+            - ${PORT_JUPYTER}:8888
+            - ${PORT_TENSORBOARD}:6006
