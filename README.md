@@ -18,6 +18,8 @@ Follow preparation steps from https://dhsegment.readthedocs.io/en/latest/start/i
 
 Alternatively, use the Docker configuration included in the repository.
 
+Note: make sure you have GIT LFS installed on the client where the repository is cloned. Otherwise, the pre-trained model will not be included.
+
 ## Training
 
 - Clone [dhSegment](https://github.com/dhlab-epfl/dhSegment) repo:
