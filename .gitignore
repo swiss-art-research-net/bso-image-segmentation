@@ -7,5 +7,5 @@ dhSegment
 pretrained_models/*.ckpt
 model/
 data/images/*.jpg
-output/*.jpg
+output
 .env
