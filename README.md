@@ -85,14 +85,12 @@ Configuration of the workflow is done by adapting the file `pipeline/config.yml`
 # The CSV file to store and (in CSV mode) read the input data
 dataFile: ../data/data.csv
 
+# The Trig file to store the RDF output
+trigFile: ../output/regions.trig
+
 # The directory where source images are stored or downloaded to
 imageDirectory: ../data/images
 
-# The CSV file for the segmentation result
-outputCSV: ../output/pages.csv
-
-# The directory to store Output Trig files
-trigDirectory: ../output/trig
 
 # Operation mode
 # ---
@@ -123,5 +121,4 @@ query: '
             la:access_point ?image .
       BIND(STRAFTER(STR(?subject), "https://resource.swissartresearch.net/artwork/") as ?id)
   } ORDER BY ?id'
-
 ```
