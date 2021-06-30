@@ -2,7 +2,7 @@
 
 
 # The CSV file to store and (in CSV mode) read the input data
-dataFile: ../data/inputData.csv
+dataFile: ../data/data.csv
 
 # The directory where source images are stored or downloaded to
 imageDirectory: ../data/images

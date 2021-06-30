@@ -10,3 +10,5 @@ data/images/*.jpg
 output
 .env
 docker-compose.override.yml
+*.csv
+!data/image.csv
