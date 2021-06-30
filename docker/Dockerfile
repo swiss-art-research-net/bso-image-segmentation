@@ -16,6 +16,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python3.6
 RUN pip3 install notebook opencv-python
 RUN pip3 install git+https://github.com/dhlab-epfl/dhSegment
 RUN pip3 install tensorflow==1.13.1
+RUN pip3 install PYyaml SPARQLWrapper tqdm
 
 RUN mkdir workdir
 VOLUME /workdir

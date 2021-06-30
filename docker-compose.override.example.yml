@@ -1,0 +1,10 @@
+version: "3"
+services:
+    dhsegment:
+        networks:
+            - docker-network-with-sparql-endpoint
+    
+networks:
+    docker-network-with-sparql-endpoint:
+        external: true
+
