@@ -9,3 +9,4 @@ model/
 data/images/*.jpg
 output
 .env
+docker-compose.override.yml

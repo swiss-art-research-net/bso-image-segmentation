@@ -20,7 +20,7 @@ trigDirectory: ../output/trig
 mode: SPARQL
 
 # The endpoint to execute the query when in SPARQL mode
-endpoint: http://localhost:7778/blazegraph/sparql
+endpoint: http://blazegraph:8080/blazegraph/sparql
 
 # The SPARQL Query (when in SPARQL mode)
 # ---
