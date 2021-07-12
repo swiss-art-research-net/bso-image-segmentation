@@ -12,7 +12,7 @@ imageDirectory: ../data/images
 # ---
 # SPARQL : Query data from a SPARQL endpoint (configuration below)
 # CSV : Read data from CSV file (configuration below)
-mode: SPARQL
+mode: CSV
 
 # The endpoint to execute the query when in SPARQL mode
 endpoint: http://blazegraph:8080/blazegraph/sparql
