@@ -35,7 +35,7 @@ Alternatively, use the Docker configuration included in the repository.
 - (optional) Annotate images data using [RunwayML](https://runwayml.com/)
 - Download images using the `download-annotated-images.ipynb` notebook
 - Create training data using the `generate-training-images.ipynb` notebook
-- Split into training and validation set by crunning the `split-training-data.ipynb` notebook until the appropriate cell
+- Split into training and validation set by running the `split-training-data.ipynb` notebook until the appropriate cell
 - Download pretrained model by running:
 ```
 cd pretrained_models
