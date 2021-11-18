@@ -13,3 +13,5 @@ output
 docker-compose.override.yml
 *.csv
 !data/image.csv
+debug
+!debug/.gitkeep
