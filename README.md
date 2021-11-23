@@ -122,3 +122,19 @@ query: '
       BIND(STRAFTER(STR(?subject), "https://resource.swissartresearch.net/artwork/") as ?id)
   } ORDER BY ?id'
 ```
+
+## Debug
+
+To check the result visually on specific images, place them in the `debug/images` directory. Enter the container with
+
+```
+docker exec -it sari_image_classification_dhsegment bash
+```
+
+and run
+
+```
+python debug.py
+```
+
+The results are saved in `debug/processed_images`.
