@@ -50,9 +50,14 @@ class BSOImageCropping:
     def makeBW(self, image):
         return cv2.cvtColor(image.copy(), cv2.COLOR_RGB2GRAY)
         
-    def thresholdImage(self, image):   
+    def thresholdImage(self, image, invertImage=None):   
         padding = 5
-        if image[image.shape[0]-padding][image.shape[1]-padding] > 127:
+        if invertImage == None:
+            if image[image.shape[0]-padding][image.shape[1]-padding] > 127:
+                thresholdMethod = cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU
+            else:
+                thresholdMethod = cv2.THRESH_BINARY+cv2.THRESH_OTSU
+        elif invertImage == True:
             thresholdMethod = cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU
         else:
             thresholdMethod = cv2.THRESH_BINARY+cv2.THRESH_OTSU
@@ -60,7 +65,7 @@ class BSOImageCropping:
         ret, thresh = cv2.threshold(image,0,255,thresholdMethod)   
         return thresh
     
-    def cropImage(self, image, preprocessMethod=METHOD_TRHESH, selectMethod=SELECT_SQUAREST):
+    def cropImage(self, image, invertImage=None, preprocessMethod=METHOD_TRHESH, selectMethod=SELECT_SQUAREST):
         # Extend image to improve recognition of (document) edges that
         # are close to the image edge
         extendedImage = self.extendImage(image)
@@ -76,7 +81,7 @@ class BSOImageCropping:
         if preprocessMethod == self.METHOD_CANNY:
             thresh = self.cannyImage(morphImage)
         else:
-            thresh = self.thresholdImage(morphImage)
+            thresh = self.thresholdImage(morphImage, invertImage)
         
         # Detect contours
         contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -133,7 +138,7 @@ class BSOImageCropping:
             #self.displayImage(morphImage)
             self.displayImage(thresh)
             self.displayImage(contourImage)
-            #self.displayImage(rectangleImage)
+            self.displayImage(rectangleImage)
             self.displayImage(croppedImage)
             
         return x0, y0, x1-x0, y1-y0
